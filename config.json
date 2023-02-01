@@ -20,10 +20,10 @@
 					"path": "VMESS_WSPATH"
 				}
 			},
-            "sniffing": {
-                "enabled": true, //一定要开启 sniffing，V2Ray 才能识别 Netflix 的流量
-                "destOverride": ["http", "tls"]
-            },
+			"sniffing": {
+				"enabled": true,
+				"destOverride": ["http", "tls"]
+            }
 		},
 		{
 			"port": 20000,
@@ -46,8 +46,8 @@
 	"outbounds": [{
 		"protocol": "freedom",
 		"settings": {
-            "domainStrategy": "UseIP" // 必须设定 domainStrategy 为 UseIP 以使用内置的DNS
-        }
+			"domainStrategy": "UseIP"
+		}
 	}],
 	"dns": {
 		"server": [
