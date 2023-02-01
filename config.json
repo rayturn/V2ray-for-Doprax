@@ -11,7 +11,7 @@
 			"settings": {
 				"clients": [{
 					"id": "UUID",
-					"alterId": 0
+					"alterId": 64
 				}]
 			},
 			"streamSettings": {
@@ -19,7 +19,11 @@
 				"wsSettings": {
 					"path": "VMESS_WSPATH"
 				}
-			}
+			},
+            "sniffing": {
+                "enabled": true, //一定要开启 sniffing，V2Ray 才能识别 Netflix 的流量
+                "destOverride": ["http", "tls"]
+            },
 		},
 		{
 			"port": 20000,
@@ -41,12 +45,16 @@
 	],
 	"outbounds": [{
 		"protocol": "freedom",
-		"settings": {}
+		"settings": {
+            "domainStrategy": "UseIP" // 必须设定 domainStrategy 为 UseIP 以使用内置的DNS
+        }
 	}],
 	"dns": {
 		"server": [
 			"8.8.8.8",
 			"8.8.4.4",
+			"208.67.222.222",
+			"223.5.5.5",
 			"localhost"
 		]
 	}
