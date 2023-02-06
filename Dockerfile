@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y supervisor wget unzip
 ENV UUID 62d68ab5-8e8d-41e8-8527-3841725819cc
 ENV VMESS_WSPATH /blog
 ENV VLESS_WSPATH /news
+ENV VSS_WSPATH /game
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY nginx.conf /etc/nginx/nginx.conf

@@ -39,12 +39,18 @@
 			}
 		},
 		{
-			"port": 30000,
+			"port": 20001,
 			"protocol": "shadowsocks",
 			"settings": {
 				"method": "chacha20-poly1305",
 				"ota": true,
 				"password": "15504956"
+			},
+			"streamSettings": {
+				"network": "ws",
+				"wsSettings": {
+					"path": "VSS_WSPATH"
+				}
 			}
 		}
 	],
